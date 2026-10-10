@@ -1,7 +1,7 @@
 import CommandLineKitCore
 import Foundation
 
-/// Replaces secrets with `***` in streamed chunks, in the returned result and in a thrown ``CommandError``.
+/// Replaces secrets with `***` in streamed chunks, in the returned result and in a thrown `CommandError`.
 ///
 /// A secret split across two chunks is still found: the handler holds back the last
 /// `longestSecret - 1` bytes until more data or `end()` arrives.

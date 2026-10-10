@@ -28,7 +28,7 @@ public struct CommandPipelineResult: Sendable {
     }
 }
 
-/// `a | b | c`: each stage's stdout becomes the next stage's ``CommandRunner/Command/standardInput``.
+/// `a | b | c`: each stage's stdout becomes the next stage's `CommandRunner.Command.standardInput`.
 ///
 /// The runner must honour `standardInput` (`.data` for `.buffered`, `.stream` for `.streaming`).
 public struct CommandPipeline: Sendable {

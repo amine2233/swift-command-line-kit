@@ -17,7 +17,7 @@ public actor CommandLineRunnerStub: CommandLineRunner {
         self.queue = []
     }
 
-    /// Answers with each result in turn, then with ``CommandResult/success``.
+    /// Answers with each result in turn, then with `CommandResult.success`.
     public init(results: [CommandResult]) {
         self.respond = nil
         self.queue = results

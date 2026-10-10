@@ -1,7 +1,7 @@
 import CommandLineKitCore
 import Foundation
 
-/// Logs start, end and duration of every run through a ``CommandLogger``. Never output bytes or environment.
+/// Logs start, end and duration of every run through a `CommandLogger`. Never output bytes or environment.
 public struct CommandMiddlewareLogging: CommandMiddleware {
     private let logger: any CommandLogger
 

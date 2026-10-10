@@ -26,7 +26,7 @@ public protocol CommandMiddleware: Sendable {
     ) async throws -> CommandResult
 }
 
-/// Wraps a runner in links. The first link is the outermost. Nothing runs before ``CommandExecution/run()``.
+/// Wraps a runner in links. The first link is the outermost. Nothing runs before `CommandExecution.run()`.
 public struct CommandLineRunnerMiddleware: CommandLineRunner {
     private let base: any CommandLineRunner
     private let links: [any CommandMiddleware]

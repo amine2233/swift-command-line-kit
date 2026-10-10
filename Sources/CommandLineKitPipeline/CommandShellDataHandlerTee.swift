@@ -12,8 +12,11 @@ public final class CommandShellDataHandlerTee: CommandShellDataHandler, @uncheck
     private let onEnd: @Sendable () -> Void
     private let lock = NSLock()
 
-    /// - Parameter forwardsEnd: Pass `false` when several tees share `base`, and call `base.end()` yourself
-    /// once.
+    /// - Parameters:
+    ///   - base: The handler every chunk is forwarded to, if any.
+    ///   - forwardsEnd: Pass `false` when several tees share `base`, and call `base.end()` yourself once.
+    ///   - observe: Called with each chunk.
+    ///   - onEnd: Called when the stream ends.
     public init(
         forwardingTo base: (any CommandShellDataHandler)? = nil,
         forwardsEnd: Bool = true,
