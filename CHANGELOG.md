@@ -1,3 +1,12 @@
+# [1.1.0](https://github.com/amine2233/swift-command-line-kit/compare/1.0.1...1.1.0) (2026-10-10)
+
+
+## Features
+
+
+* add swift-command-line-kit agent skill and Claude Code plugin ([25d7c6b](https://github.com/amine2233/swift-command-line-kit/commit/25d7c6b65466b84ace074427695512be228fb3f4))
+
+
 # [1.0.1](https://github.com/amine2233/swift-command-line-kit/compare/1.0.0...1.0.1) (2026-10-10)
 
 
