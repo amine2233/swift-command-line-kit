@@ -12,3 +12,5 @@ log.log
 public
 /.build
 /Examples/*/.build
+*.log
+Combined.doccarchive
