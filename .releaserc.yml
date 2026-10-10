@@ -1,0 +1,17 @@
+plugins:
+  [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/gitlab",
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": './bumpversion.sh "${lastRelease.version}" "${nextRelease.version}" "${nextRelease.type}"',
+      },
+    ],
+    ["@semantic-release/git", { "assets": ["*.md"] }],
+  ]
+branches:
+  - "main"
+tagFormat: "${version}"

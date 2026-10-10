@@ -1,0 +1,23 @@
+version: 1
+labels:
+  - name: "🐛 bug"
+    color: "#d73a4a"
+    priority: 2
+    description: "A problem that needs to be fixed"
+  - name: "🚨 critical"
+    color: "#FCFE59"
+    priority: 1
+    description: "A problem that needs immediate attention"
+  - name: "📗 documentation"
+    color: "#0075ca"
+    description: "Documentation that needs to be updated"
+  - name: "🐣 feature"
+    color: "#a2eeef"
+    priority: 2
+    description: "A new feature that needs to be implemented"
+  - name: "🛠️ chore"
+    color: "#0e8a16"
+    description: "A maintenance task that needs to be integrated"
+  - name: "💡 idea"
+    color: "#ffd700"
+    description: "An idea that needs to be implemented"
