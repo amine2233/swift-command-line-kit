@@ -47,4 +47,4 @@ A runner that cannot stream calls `handler.handleAll(data)` once per stream afte
 }
 ```
 
-`Examples/custom-runner-example` in the repository is a complete in-memory runner built this way.
+`skills/swift-command-line-kit/references/examples/custom-runner-example` in the repository is a complete in-memory runner built this way.

@@ -127,3 +127,20 @@ the prompts.
 `./test.sh` runs the static rules, the unit tests, the custom-runner example, every command of the sample app and
 the input checks, including under a pseudo-terminal.
 `./test.sh --docker 6.1` does the same on Linux.
+
+## Agent skill
+
+`skills/swift-command-line-kit` teaches a coding agent to integrate and use this package. Install it with
+
+```bash
+npx skills add amine2233/swift-command-line-kit
+```
+
+or as a Claude Code plugin:
+
+```text
+/plugin marketplace add amine2233/swift-command-line-kit
+/plugin install swift-command-line-kit@swift-command-line-kit
+```
+
+The examples live in `skills/swift-command-line-kit/references/examples`.

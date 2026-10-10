@@ -7,6 +7,9 @@ import PackageDescription
 let rootPackageIdentity = URL(fileURLWithPath: Context.packageDirectory)
     .deletingLastPathComponent()
     .deletingLastPathComponent()
+    .deletingLastPathComponent()
+    .deletingLastPathComponent()
+    .deletingLastPathComponent()
     .lastPathComponent
     .lowercased()
 
@@ -19,7 +22,7 @@ let package = Package(
         .library(name: "CustomRunnerExample", targets: ["CustomRunnerExample"])
     ],
     dependencies: [
-        .package(path: "../..")
+        .package(path: "../../../../..")
     ],
     targets: [
         .target(

@@ -11,6 +11,6 @@ junit.xml
 log.log
 public
 /.build
-/Examples/*/.build
+/skills/*/references/examples/*/.build
 *.log
 Combined.doccarchive

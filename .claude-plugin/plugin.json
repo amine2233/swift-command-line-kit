@@ -1,0 +1,8 @@
+{
+  "name": "swift-command-line-kit",
+  "description": "Skill to integrate and use swift-command-line-kit: injectable process runner, pipelines, middleware, CLI input and test stubs.",
+  "version": "1.0.0",
+  "author": { "name": "Amine BENSALAH" },
+  "repository": "https://github.com/amine2233/swift-command-line-kit",
+  "skills": "./skills"
+}

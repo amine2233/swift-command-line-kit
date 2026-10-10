@@ -9,12 +9,12 @@ Options: `--timeout <seconds>` (default 10, hard per case), `--verbose`.
 
 ## macOS
 
-    swift run --package-path Examples/sample-cli-app sample-cli-app selftest
+    swift run --package-path skills/swift-command-line-kit/references/examples/sample-cli-app sample-cli-app selftest
 
 ## Linux
 
     docker run --rm -v "$PWD":/w -w /w swift:6.1 \
-      swift run --package-path Examples/sample-cli-app sample-cli-app selftest
+      swift run --package-path skills/swift-command-line-kit/references/examples/sample-cli-app sample-cli-app selftest
 
 `./test.sh` at the repository root builds this package, runs every command and checks exit codes and
 output (`./test.sh --docker 6.1` for Linux).

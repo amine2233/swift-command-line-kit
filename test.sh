@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Checks the whole package: static rules, unit tests, the custom-runner example, then builds
-# Examples/sample-cli-app, runs every command and the input checks (including under a pseudo-terminal), checking each exit code and PASS line.
+# skills/swift-command-line-kit/references/examples/sample-cli-app, runs every command and the input checks (including under a pseudo-terminal), checking each exit code and PASS line.
 # Exit 0 only if everything matches.
 #
 #   ./test.sh                 build and run on this machine
@@ -14,7 +14,8 @@ if [[ "${1:-}" == "--docker" ]]; then
     exec docker run --rm -v "$PWD":/w -w /w "$image" ./test.sh
 fi
 
-readonly package="Examples/sample-cli-app"
+readonly examples="skills/swift-command-line-kit/references/examples"
+readonly package="$examples/sample-cli-app"
 readonly timeout=10
 errfile="$(mktemp)"
 trap 'rm -f "$errfile"' EXIT
@@ -32,14 +33,14 @@ else
 fi
 
 echo "== static: no output/error streams"
-if grep -rnE 'outputStream|errorStream|CommandStream' Sources/ Examples/ Tests/ --include='*.swift' --exclude-dir=.build; then
+if grep -rnE 'outputStream|errorStream|CommandStream' Sources/ "$examples"/ Tests/ --include='*.swift' --exclude-dir=.build; then
     bad "stream API found"
 else
     ok "no output/error streams"
 fi
 
 echo "== extension seam: the custom runner depends on Core and Testing only"
-if grep -E 'name: "CommandLineKit"[,)]' Examples/custom-runner-example/Package.swift; then
+if grep -E 'name: "CommandLineKit"[,)]' "$examples"/custom-runner-example/Package.swift; then
     bad "custom-runner-example depends on the default engine"
 else
     ok "custom-runner-example does not use CommandLineKit"
@@ -49,7 +50,7 @@ echo "== library unit tests"
 if swift test 2>&1 | tail -3; then ok "swift test"; else bad "swift test"; fi
 
 echo "== custom runner example (contract checks)"
-if swift test --package-path Examples/custom-runner-example 2>&1 | tail -3; then
+if swift test --package-path "$examples"/custom-runner-example 2>&1 | tail -3; then
     ok "custom-runner-example passes the runner contract"
 else
     bad "custom-runner-example"

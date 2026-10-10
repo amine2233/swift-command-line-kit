@@ -1,0 +1,11 @@
+{
+  "name": "swift-command-line-kit",
+  "owner": { "name": "Amine BENSALAH" },
+  "plugins": [
+    {
+      "name": "swift-command-line-kit",
+      "source": "./",
+      "description": "Integrate and use swift-command-line-kit in Swift projects."
+    }
+  ]
+}
