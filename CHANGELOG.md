@@ -1,3 +1,12 @@
+# [1.0.1](https://github.com/amine2233/swift-command-line-kit/compare/1.0.0...1.0.1) (2026-10-10)
+
+
+## Bug Fixes
+
+
+* resolve DocC warnings and raise minimum macOS to 11 (#1) ([800db5c](https://github.com/amine2233/swift-command-line-kit/commit/800db5c6a1baf3906815eadb6889a2b8aeb1d904))
+
+
 # 1.0.0 (2026-10-10)
 
 

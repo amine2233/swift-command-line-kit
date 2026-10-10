@@ -10,7 +10,7 @@ Add this package to your Package.swift as dependency and to your target.
 dependencies: [
     .package(
         url: "https://github.com/amine2233/swift-command-line-kit.git",
-        from: "1.0.0"
+        from: "1.0.1"
     )
 ],
 targets: [
