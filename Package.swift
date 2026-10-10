@@ -5,7 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "swift-command-line-kit",
-    platforms: [.macOS(.v10_15)],
+    platforms: [.macOS(.v11)],
     products: [
         .library(name: "CommandLineKitCore", targets: ["CommandLineKitCore"]),
         .library(name: "CommandLineKit", targets: ["CommandLineKit"]),

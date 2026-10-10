@@ -14,7 +14,7 @@ let rootPackageIdentity = URL(fileURLWithPath: Context.packageDirectory)
 /// never on the default engine (`CommandLineKit`).
 let package = Package(
     name: "custom-runner-example",
-    platforms: [.macOS(.v10_15)],
+    platforms: [.macOS(.v11)],
     products: [
         .library(name: "CustomRunnerExample", targets: ["CustomRunnerExample"])
     ],

@@ -1,7 +1,7 @@
 import CommandLineKitCore
 import Foundation
 
-/// Executable checks of what every ``CommandLineRunner`` promises. Run them against your own runner.
+/// Executable checks of what every `CommandLineRunner` promises. Run them against your own runner.
 ///
 /// It throws instead of using `#expect`, so it works under Swift Testing and XCTest alike.
 public enum CommandLineRunnerContract {
@@ -59,6 +59,7 @@ public enum CommandLineRunnerContract {
     public static let largeSize = 2 * 1_024 * 1_024
 
     /// - Parameters:
+    ///   - runner: The runner to check.
     ///   - standardInput: Also check that `.data` and `.stream` input reach the child.
     ///   - command: Maps a scenario to a command your runner understands. Defaults to `sh -c`.
     public static func verify(
